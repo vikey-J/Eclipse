@@ -1,0 +1,24 @@
+package com.interviewPrograms;
+
+import java.util.Scanner;
+
+public class ReverseString {
+	public static void main(String[] args) {
+		String s = "";
+		String rs = "";
+		char ch;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String : " + s);
+		s = sc.nextLine();
+		for (int i = 0; i < s.length(); i++) {
+			ch = s.charAt(i);
+			rs = ch + rs;
+		}
+		System.out.println("Reverse String :" + rs);
+		if (rs.equals(s)) {
+			System.out.println("It is Polindrome");
+		} else {
+			System.out.println("It is not polindrome");
+		}
+	}
+}

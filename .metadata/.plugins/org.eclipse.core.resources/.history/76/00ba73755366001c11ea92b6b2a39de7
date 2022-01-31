@@ -1,0 +1,27 @@
+package com.testNG_Runner;
+
+import org.testng.annotations.Test;
+
+public class Women {
+	@Test
+	private void tShirt() {
+		System.out.println("T-Shirt");
+	}
+	@Test
+	private void blouses() {
+		System.out.println("Blouses");
+	}
+	@Test
+	private void casualDress() {
+		System.out.println("Casual Dress");
+	}
+	@Test
+	private void eveningDress() {
+		System.out.println("Evening Dress");
+	}
+	@Test
+	private void summerDress() {
+		System.out.println("Summer Dress");
+	}
+	
+}

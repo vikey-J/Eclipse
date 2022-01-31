@@ -1,0 +1,14 @@
+package com.AfterTestNG;
+
+import org.junit.Test;
+import io.restassured.RestAssured;
+
+public class Data_Validation {
+	@Test
+	private void validate_Data() {
+		RestA
+	}
+	
+	
+
+}

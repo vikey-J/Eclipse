@@ -1,0 +1,26 @@
+package com.coding;
+import java.io.*;
+import java.util.Scanner;
+public class Vikey {
+	public static void main(String[] args) {
+		String s = "vikey";
+		String nstr="";
+		char ch;
+		System.out.println("Original word :");
+		System.out.println("vikey");
+		for (int i = 0; i < s.length(); i++) {
+			ch=s.charAt(i);
+			nstr=ch+nstr;
+		}
+		System.out.println("Reverse word :"+nstr);
+			
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+}

@@ -1,0 +1,13 @@
+package com.coding;
+
+public class DoubleEqual_dotEuqals {
+	public static void main(String[] args) {
+		String s = new String("VIKEY");
+		String s1 = new String("Vikey");
+		System.out.println(s==s1);
+		System.out.println(s.equals(s1));
+		
+
+	}
+
+}

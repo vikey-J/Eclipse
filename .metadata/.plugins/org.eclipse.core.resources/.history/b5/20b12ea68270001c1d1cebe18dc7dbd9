@@ -1,0 +1,13 @@
+package com.string;
+
+public class String_Function {
+	public static void main(String[] args) {
+		String s="VIKNESHKUMAR";
+		String substring = s.substring(7,12);
+		System.out.println(substring);
+		String s1="J";
+		String concat = s.concat(s1);
+		System.out.println(concat);
+	}
+
+}

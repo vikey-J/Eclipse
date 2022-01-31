@@ -1,0 +1,28 @@
+package com.practice;
+
+import java.util.Scanner;
+
+public class Apple{
+	public static void main(String[] args) {
+	Scanner sc =new Scanner(System.in);
+	System.out.println("nextline :");
+	String nextLine = sc.nextLine();
+	System.out.println("nextLine :"+nextLine);
+	
+	System.out.println("next : ");
+	String next = sc.next();
+	System.out.println("next : ");
+	System.out.println("Float :"+next);
+	 float f = sc.nextFloat();
+	System.out.println("char At of :"+f);
+	System.out.println("next : ");
+	char at = sc.next().charAt(2);
+	System.out.println("double :"+at);
+	System.out.println("next : ");
+	double d = sc.nextDouble();
+	System.out.println("double :"+d);
+	
+	long l=sc.nextLong();
+	System.out.println("Long :"+l);
+}
+}

@@ -1,0 +1,11 @@
+package com.coding;
+public class Vikey {
+	public static String String_r(String s) {
+		StringBuilder sb=new StringBuilder(s);
+		sb.reverse();
+		return sb.toString();
+	}
+		
+		
+	
+}

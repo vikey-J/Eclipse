@@ -1,0 +1,15 @@
+package com.intro;
+
+public class A {
+	public void sports() {
+		System.out.println("Players");
+	}
+	public void stars() {
+		System.out.println("Actors");
+	}
+	public void college() {
+			System.out.println("Students");
+		
+	}
+
+}

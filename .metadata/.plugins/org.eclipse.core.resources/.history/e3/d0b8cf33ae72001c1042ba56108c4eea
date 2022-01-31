@@ -1,0 +1,21 @@
+package com.array;
+
+public class Child extends Parent {
+	@Override
+	public void method() {
+		System.out.println("child");
+	}
+
+	public static void main(String[] args) {
+		Parent a = new Parent();
+		a.method();
+		Child a1 = new Child();
+		a1.method();
+		Parent b = new Child();
+		b.method();
+
+	}
+
+}
+
+           

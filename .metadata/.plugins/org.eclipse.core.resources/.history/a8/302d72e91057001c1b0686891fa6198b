@@ -1,0 +1,149 @@
+package com.runner_Class;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+import com.base_Class.Base_Class;
+import com.base_Class.HomePage;
+
+public class Test_Runner extends Base_Class {
+	public static WebDriver driver;     //driver-->null
+	public static void main(String[] args)throws IOException {
+	    driver = getBrowser("chrome");
+		url("http://automationpractice.com/index.php");
+		// move the mouse to women
+		HomePage hp=new HomePage(driver);
+		moveToElement(driver,hp.getWomen());
+		WebElement dresses = driver.findElement(By.xpath("(//a[@title='Dresses'])[2]"));
+		click(dresses);
+        implicitWait(30, TimeUnit.SECONDS);
+		WebElement cassual_Dresses = driver.findElement(By.xpath("(//a[@class='subcategory-name'])[1]"));
+		click(cassual_Dresses);
+
+		implicitWait(30, TimeUnit.SECONDS);
+		// move the mouse to instock
+		WebElement instock = driver.findElement(By.xpath("//span[@class='available-now']"));
+		moveToElement(driver, instock);
+
+		implicitWait(30, TimeUnit.SECONDS);
+		WebElement addtocart = driver.findElement(By.xpath("//a[@title='Add to cart']"));
+		click(addtocart);
+
+		implicitWait(30, TimeUnit.SECONDS);
+		WebElement checkout = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[2]"));
+		click(checkout);
+
+		// 1.summary
+
+		javaScriptExecutor();
+
+		implicitWait(30, TimeUnit.SECONDS);
+		// click the + button for 6 times
+		WebElement plusClick1 = driver.findElement(By.xpath("//i[@class='icon-plus']"));
+        click(plusClick1);
+        WebElement plusClick2 = driver.findElement(By.xpath("//i[@class='icon-plus']"));
+        click(plusClick2);
+        WebElement plusClick3 = driver.findElement(By.xpath("//i[@class='icon-plus']"));
+        click(plusClick3);
+        WebElement plusClick4 = driver.findElement(By.xpath("//i[@class='icon-plus']"));
+        click(plusClick4);
+        WebElement plusClick5 = driver.findElement(By.xpath("//i[@class='icon-plus']"));
+        click(plusClick5);
+        WebElement plusClick6 = driver.findElement(By.xpath("//i[@class='icon-plus']"));
+        click(plusClick6);
+        
+        implicitWait(30, TimeUnit.SECONDS);
+		WebElement checkout2 = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[3]"));
+		click(checkout2);
+
+		// 2.Signin
+
+        implicitWait(30, TimeUnit.SECONDS);
+		WebElement email = driver.findElement(By.xpath("//input[@id='email_create']"));
+		sendkeys(email,"vikey10@gmail.com");
+
+		WebElement create_Acc = driver.findElement(By.id("SubmitCreate"));
+		click(create_Acc);
+
+		implicitWait(30, TimeUnit.SECONDS);
+		WebElement mr = driver.findElement(By.xpath("(//input[@type='radio'])[1]"));
+		click(mr);
+
+		WebElement firstname = driver.findElement(By.id("customer_firstname"));
+		sendkeys(firstname, "viknesh");
+
+		WebElement lastname = driver.findElement(By.id("customer_lastname"));
+		sendkeys(lastname,"kumar");
+
+		WebElement password = driver.findElement(By.id("passwd"));
+		sendkeys(password,"vikey@123");
+
+		// 3.Address
+
+		WebElement adress_Fn = driver.findElement(By.id("firstname"));
+		sendkeys(adress_Fn,"viknesh");
+
+		WebElement adress_Ln = driver.findElement(By.id("lastname"));
+		sendkeys(adress_Ln,"kumar" );
+
+		WebElement adress_company = driver.findElement(By.id("company"));
+		sendkeys(adress_company,"DLF");
+
+		WebElement adress = driver.findElement(By.id("address1"));
+		sendkeys(adress,"7,DLF road");
+
+		WebElement city = driver.findElement(By.id("city"));
+		sendkeys(city,"Chennai");
+
+		WebElement state = driver.findElement(By.xpath("//select[@name='id_state']"));
+		dropdown(state, "14");
+
+		WebElement post = driver.findElement(By.id("postcode"));
+		sendkeys(post,"00000");
+
+		WebElement phoneno = driver.findElement(By.id("phone_mobile"));
+		sendkeys(phoneno,"9876543210");
+
+		WebElement register = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[3]"));
+		click(register);
+
+		implicitWait(30, TimeUnit.SECONDS);
+		WebElement checkout3 = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[7]"));
+        click(checkout3);
+        
+		// 4.Shipping
+        implicitWait(30, TimeUnit.SECONDS);
+		WebElement agree = driver.findElement(By.id("cgv"));
+		click(agree);
+
+		WebElement checkout4 = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[3]"));
+		click(checkout4);
+
+		// 5.Payment
+
+		implicitWait(30, TimeUnit.SECONDS);
+		WebElement bank = driver.findElement(By.xpath("//a[@title='Pay by bank wire']"));
+		click(bank);
+
+		WebElement confirm = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[3]"));
+		click(confirm);
+
+		javaScriptExecutor();
+
+	}
+}
+
+
+

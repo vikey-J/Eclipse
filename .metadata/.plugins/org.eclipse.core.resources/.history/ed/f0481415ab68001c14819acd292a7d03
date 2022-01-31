@@ -1,0 +1,12 @@
+package com.AfterTestNG;
+
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+
+public class Data_Validation {
+	public static WebDriver driver;
+	private void adta() {
+
+	}
+
+}

@@ -1,0 +1,31 @@
+package com.testNG_Runner;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+
+import com.base_Class.Base_Class;
+import com.dressCasualDress.PageObjectManagerCasualDress;
+import com.testNG_TShirt_POM.PageObjectManagerTshirt;
+import com.women_POManager.PageObjectManager;
+
+public class TestNG_AutomationPractice extends Base_Class{
+	public static WebDriver driver=getBrowser("chrome");
+	public static PageObjectManager pom=new PageObjectManager(driver);
+	@BeforeClass
+	public void url_Launch() throws Throwable {
+		implicitWait(10, TimeUnit.SECONDS);
+		url("http://automationpractice.com/index.php");
+	}
+	@BeforeMethod
+	public void Signin() {
+		implicitWait(10, TimeUnit.SECONDS);
+		click(pom.getPOM1().getInstanceSP().getLogin());
+		sendkeys(pom.getPOM1().getInstanceSP().getEmail(), "vikey46@gmail.com");
+		sendkeys(pom.getPOM1().getInstanceSP().getPassword(), "vikey@123");
+		
+	}
+	
+}

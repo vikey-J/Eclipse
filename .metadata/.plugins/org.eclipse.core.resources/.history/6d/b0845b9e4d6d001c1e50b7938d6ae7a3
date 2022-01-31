@@ -1,0 +1,106 @@
+Feature: Purchasing Dresses On Automation Practice Application
+Scenario: Click Signin For TShirt 
+Given user Launch The Application
+Then user Click On Signin Button And It Navigate To My Store Page1
+Scenario: Signin for Tshirt 
+When user Enter The Email Adress In  Email Address Field1
+And user Enter The Password In Password Field1
+Then user Click On Signin Button And It Navigate To My Account Page1 
+Scenario: User Purchase The T-Shirt  
+When user Click on Women Button1 
+And user Click On Tops Button1
+And user Click On TShirt Button
+And user Move To Cursor On Instock Button And Click AddToCart Button1
+And user Click On ProceedToCheckOut Button1
+And user Enter Or Increse Quality In TextBox1 
+And user Click On ProceedtoCheckOut Button1
+And user Click On ProceedtoCheckout Button1
+And user Select The CheckBox On Terms Of Service1 
+And user Click On ProceedToCheckout Button1
+And user Click On Pay By Bank Wire Button1
+And user Click On I Confirm My Order Button1 
+Then user Click On Sign Out Button It Navigate To HomePage1
+
+Scenario: Click Signin For Blouses 
+Then user Click On Signin Button And It Navigate To My Store Page2
+Scenario: Signin for Blouses
+When user Enter The Email Adress In  Email Address Field2
+And user Enter The Password In Password Field2
+Then user Click On Signin Button And It Navigate To My Account Page2 
+Scenario: User Purchase The blouses
+When user Click on Women Button2
+And user Click On Tops Button2
+And user Click On Blouses Button
+And user Move To Cursor On Instock Button And Click AddToCart Button2
+And user Click On ProceedToCheckOut Button2
+And user Enter Or Increse Quality In TextBox2 
+And user Click On ProceedtoCheckOut Button2
+And user Click On ProceedtoCheckout Button2
+And user Select The CheckBox On Terms Of Service2
+And user Click On ProceedToCheckout Button2
+And user Click On Pay By Bank Wire Button2
+And user Click On I Confirm My Order Button2 
+Then user Click On Sign Out Button It Navigate To HomePage2
+
+Scenario: Click Signin For Casual Dress
+Then user Click On Signin Button And It Navigate To My Store Page3
+Scenario: Signin for Casual Dress
+When user Enter The Email Adress In  Email Address Field3
+And user Enter The Password In Password Field3
+Then user Click On Signin Button And It Navigate To My Account Page3
+Scenario: User Purchase The Casual Dress
+When user Click on Women Button3
+And user Click On Dresses Button1
+And user Click On Casual Dress Button
+And user Move To Cursor On Instock Button And Click AddToCart Button3
+And user Click On ProceedToCheckOut Button3
+And user Enter Or Increse Quality In TextBox3 
+And user Click On ProceedtoCheckOut Button3
+And user Click On ProceedtoCheckout Button3
+And user Select The CheckBox On Terms Of Service3
+And user Click On ProceedToCheckout Button3
+And user Click On Pay By Bank Wire Button3
+And user Click On I Confirm My Order Button3 
+Then user Click On Sign Out Button It Navigate To HomePage3
+
+Scenario: Click Signin For Evening Dress
+Then user Click On Signin Button And It Navigate To My Store Page4
+Scenario: Signin for Evening Dress
+When user Enter The Email Adress In  Email Address Field4
+And user Enter The Password In Password Field4
+Then user Click On Signin Button And It Navigate To My Account Page4
+Scenario: User Purchase The Evening Dress
+When user Click on Women Button3
+And user Click On Dresses Button2
+And user Click On Evening Dress Button
+And user Move To Cursor On Instock Button And Click AddToCart Button4
+And user Click On ProceedToCheckOut Button4
+And user Enter Or Increse Quality In TextBox4 
+And user Click On ProceedtoCheckOut Button4
+And user Click On ProceedtoCheckout Button4
+And user Select The CheckBox On Terms Of Service4
+And user Click On ProceedToCheckout Button4
+And user Click On Pay By Bank Wire Button4
+And user Click On I Confirm My Order Button4 
+Then user Click On Sign Out Button It Navigate To HomePage4
+
+Scenario: Click Signin For Summer Dress
+Then user Click On Signin Button And It Navigate To My Store Page5
+Scenario: Signin for Summer Dress
+When user Enter The Email Adress In  Email Address Field5
+And user Enter The Password In Password Field5
+Then user Click On Signin Button And It Navigate To My Account Page5
+Scenario: User Purchase The Summer Dress
+When user Click on Women Button5
+And user Click On Dresses Button3
+And user Click On Summer Dress Button
+And user Move To Cursor On Instock Button And Click AddToCart Button5
+And user Click On ProceedToCheckOut Button5
+And user Enter Or Increse Quality In TextBox5 
+And user Click On ProceedtoCheckOut Button5
+And user Click On ProceedtoCheckout Button5
+And user Select The CheckBox On Terms Of Service5
+And user Click On ProceedToCheckout Button5
+And user Click On Pay By Bank Wire Button5
+And user Click On I Confirm My Order Button5 
+Then user Click On Sign Out Button It Navigate To HomePage5

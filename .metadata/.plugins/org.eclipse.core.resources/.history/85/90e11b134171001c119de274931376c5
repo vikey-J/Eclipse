@@ -1,0 +1,32 @@
+package com.dropdown;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+import com.sun.glass.events.KeyEvent;
+
+public class A {
+	public static void main(String[] args) throws AWTException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\my pc\\eclipse-workspace\\Selenium\\chromedriver_win32\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://www.amazon.in");
+		driver.manage().window().maximize();
+		Robot r=new Robot();
+		Actions a=new Actions(driver);
+		WebElement m = driver.findElement(By.xpath("//a[text()='Mobiles']"));
+		a.contextClick().build().perform();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		
+		
+	}
+
+}

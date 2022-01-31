@@ -1,0 +1,100 @@
+package com.baserunner;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+import com.base.BaseClass;
+import com.base.HomePage;
+import com.base.PurchasePage;
+import com.base.SigninPage;
+
+public class Runner extends BaseClass{
+	public static WebDriver driver=getBrowser("chrome");
+	public static HomePage hp=new HomePage(driver);
+	public static PurchasePage pp=new PurchasePage(driver);
+	public static SigninPage sp=new SigninPage(driver);
+	public static void main(String[] args) throws IOException {
+		getUrl("http://automationpractice.com/index.php");
+//	 	 move the mouse to women
+		moveToElement(driver,hp.getWomen());
+		click(hp.getDresses());
+		implicitlyWait(30, TimeUnit.SECONDS);
+		click(hp.getCassualDress());
+		implicitlyWait(30, TimeUnit.SECONDS);
+		// move the mouse to instock
+		moveToElement(driver,hp.getInstock());
+		implicitlyWait(30, TimeUnit.SECONDS);
+		click(hp.getAddToCart());
+		implicitlyWait(30, TimeUnit.SECONDS);
+		click(hp.getProceed1());
+		
+		// 1.summary
+        jsExecutor();
+		implicitlyWait(30, TimeUnit.SECONDS);
+		// click the + button for 6 times
+		click(pp.getClick1());
+		click(pp.getClick2());
+		click(pp.getClick3());
+		click(pp.getClick4());
+		click(pp.getClick5());
+		click(pp.getClick6());
+		implicitlyWait(30, TimeUnit.SECONDS);
+		click(pp.getProceed2());
+        
+		// 2.Signin
+		implicitlyWait(30, TimeUnit.SECONDS);
+		sendKeys(sp.getEmail(),"vikey1112@gmail.com");
+		click(sp.getCna());
+		implicitlyWait(30, TimeUnit.SECONDS);
+		click(sp.getMr());
+		sendKeys(sp.getFname(),"viknesh");
+		sendKeys(sp.getLname(),"kumar");
+		sendKeys(sp.getPassword(),"vikey@123");
+		selectByValue(sp.getDobDay(), "5");
+		selectByValue(sp.getDobMonth(),"4");
+		selectByValue(sp.getDobYear(),"2001");
+		
+		// 3.Address
+		sendKeys(sp.getAfname(),"viknesh");
+		sendKeys(sp.getAlname(),"kumar");
+		sendKeys(sp.getCompany(),"DLF");
+		sendKeys(sp.getAddress(),"7,DLF road");
+		sendKeys(sp.getCity(),"Chennai");
+		selectByValue(sp.getState(),"14");
+		sendKeys(sp.getPostcode(),"00000");
+		sendKeys(sp.getPhone(),"9876543210");
+		click(sp.getRegister());
+		implicitlyWait(30, TimeUnit.SECONDS);
+		click(sp.getProceed3());
+
+		// 4.Shipping
+		implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement agree = driver.findElement(By.id("cgv"));
+		click(agree);
+		WebElement checkout4 = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[3]"));
+		click(checkout4);
+
+		// 5.Payment
+		implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement bank = driver.findElement(By.xpath("//a[@title='Pay by bank wire']"));
+		click(bank);
+		WebElement confirm = driver.findElement(By.xpath("(//i[@class='icon-chevron-right right'])[3]"));
+		click(confirm);
+		jsExecutor();
+
+		// TakesScreenshot
+         takesScreenshot();
+	}
+}

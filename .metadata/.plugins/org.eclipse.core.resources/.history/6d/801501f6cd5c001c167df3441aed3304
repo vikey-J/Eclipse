@@ -1,0 +1,70 @@
+package com.runner;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.base_Class.Base_Class;
+import com.manager.POManager;
+
+import pom2.BookHotel;
+import pom2.Final;
+import pom2.HomePage;
+import pom2.SearchHotel;
+import pom2.SelectHotel;
+
+
+public class Runner extends Base_Class{
+	public static WebDriver  driver = getBrowser("chrome");
+	public static POManager pom=new POManager(driver);
+	public static void main(String[] args)  {
+		
+		url("https://adactinhotelapp.com/");
+		//login
+		sendkeys(pom.getHp().getUsername(), "vikneshkumar");
+		sendkeys(pom.getHp().getPassword(), "VCVM24");
+		click(pom.getHp().getLogin());
+		implicitWait(20, TimeUnit.SECONDS);
+		// Search Hotel
+		implicitWait(30, TimeUnit.SECONDS);
+		dropdownSelectByValue(pom.getS().getLocation(), "New York");
+		dropdownSelectByValue(pom.getS().getHotel(), "Hotel Sunshine");
+        dropdownSelectByValue(pom.getS().getRoomtypes(), "Double");
+		dropdownSelectByValue(pom.getS().getRooms(), "2");
+		sendkeys(pom.getS().getDate1(), "22/11/2021");
+		sendkeys(pom.getS().getDate2(), "24/11/2021");
+		dropdownSelectByValue(pom.getS().getAdult(),"3");
+		dropdownSelectByValue(pom.getS().getChild(), "2");
+		click(pom.getS().getSearch());
+		implicitWait(20,TimeUnit.SECONDS);
+		// Select hotel
+		click(pom.getSh().getAgree());
+		click(pom.getSh().getContinue());
+		implicitWait(20,TimeUnit.SECONDS);
+		// Book a Hotel
+		sendkeys(pom.getBh().getFname(), "VIKNESH");
+		sendkeys(pom.getBh().getLname(),"KUMAR");
+		sendkeys(pom.getBh().getAdress(),"no.17a,Avengers Tour,New York");
+		sendkeys(pom.getBh().getCreditCard(),"9876123405467744");
+		dropdownSelectByValue(pom.getBh().getCcType(), "MAST");
+		dropdownSelectByValue(pom.getBh().getExpMonth(), "10");
+		dropdownSelectByValue(pom.getBh().getExpYear(), "2022");
+		sendkeys(pom.getBh().getCcv(),"9876");
+		click(pom.getBh().getBooknow());
+		implicitWait(20, TimeUnit.SECONDS);
+		// Booking Confirmation
+		click(pom.getF().getLogout());
+				
+		
+		
+	}
+}

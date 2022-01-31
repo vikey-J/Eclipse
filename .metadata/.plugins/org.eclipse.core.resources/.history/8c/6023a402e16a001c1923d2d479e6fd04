@@ -1,0 +1,26 @@
+package com.practice;
+
+public class C implements A,B{
+
+	@Override
+	public void person3() {
+		System.out.println("Dengu");
+	}
+
+	@Override
+	public void person4() {
+		System.out.println("Maleria");
+	}
+
+	@Override
+	public void person1() {
+		System.out.println("AIDS");
+	}
+
+	@Override
+	public void person2() {
+		System.out.println("Fever");
+	}
+	
+
+}

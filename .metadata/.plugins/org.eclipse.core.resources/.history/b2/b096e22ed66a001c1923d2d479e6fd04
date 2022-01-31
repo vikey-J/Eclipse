@@ -1,0 +1,18 @@
+package com.practice;
+
+public class C extends A {
+	private void actor() {
+		System.out.println("AK");
+	}
+
+	public static void main(String[] args) {
+		C c = new C();
+		c.sports();
+		c.stars();
+		c.actor();
+//		c.player1();
+		
+
+	}
+
+}

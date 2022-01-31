@@ -1,0 +1,17 @@
+package com.array;
+
+public class B extends A {
+	@Override
+	public void parent1() {
+		System.out.println("Child");
+	}
+
+	public static void main(String[] args) {
+		A a = new A();
+
+		B b = new B();
+
+		A a1 = new B();
+	}
+
+}

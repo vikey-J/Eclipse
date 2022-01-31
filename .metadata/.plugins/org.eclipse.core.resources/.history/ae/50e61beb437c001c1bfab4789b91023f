@@ -1,0 +1,24 @@
+package com.interviewPrograms;
+
+import java.util.Scanner;
+
+public class ReverseString {
+	public static void main(String[] args) {
+		String s,rs="";
+		char ch;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Original word is : ");
+		s=sc.nextLine();
+		int l=s.length();
+		for(int i=l;i>0;i-- ) {
+			ch=s.charAt(i);
+			rs=ch+rs;
+		}
+		System.out.println("reverse String :"+rs);
+		if(s.equals(rs))
+			System.out.println("true");
+		else
+			System.out.println("false");
+
+}
+}

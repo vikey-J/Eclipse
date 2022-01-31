@@ -1,0 +1,22 @@
+package com.convertion;
+
+public class Convertion {
+	public static void main(String[] args) {
+		//int----->String
+		int a=100;
+		String str = Integer.toString(a);
+		System.out.println("string : "+str);
+		
+		//int ---->Double
+		int b=20;
+		double c=b;    //widening
+		System.out.println(c);
+		
+		//String---->Int
+		String d="20";
+		int e = Integer.parseInt(d);
+		System.out.println(e);
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+package com.convertion;
+
+import java.util.Scanner;
+
+public class Int_To_String {
+	public static void int_String() {
+		int i=10;
+		String string = Integer.toString(i);
+		System.out.println(string);
+}
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		String string = sc.toString();
+		System.out.println(string);
+		int_String();
+	}
+}

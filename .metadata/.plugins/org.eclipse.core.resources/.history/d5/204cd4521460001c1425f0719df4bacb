@@ -1,0 +1,7 @@
+package com.helperrrr;
+
+public class Config_Read {
+	public void getUrl() {
+		
+	}
+}

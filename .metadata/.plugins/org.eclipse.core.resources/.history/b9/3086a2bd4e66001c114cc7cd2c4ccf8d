@@ -1,0 +1,23 @@
+package com.testng;
+
+import org.testng.IRetryAnalyzer;
+import org.testng.ITestResult;
+
+public class Return implements IRetryAnalyzer{
+
+	public boolean retry(ITestResult result) {
+		int start=0;
+		int end=3;
+		if (start<end) {
+			start++;
+			return true;
+			
+		}
+		
+		
+		return false;
+	}
+	
+	
+
+}

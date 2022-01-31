@@ -1,0 +1,20 @@
+package com.coding;
+
+import java.util.Scanner;
+
+public class Vikey {
+public static void main(String[] args) {
+	String s,r="";
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter the string reverse");
+	s=sc.nextLine();
+	int l=s.length();
+	for (int i=l-1;i>=0 ;i--) 
+		r=r+s.charAt(i);
+		System.out.println("Reverse String :"+r);
+		
+	
+	
+	
+} 
+}

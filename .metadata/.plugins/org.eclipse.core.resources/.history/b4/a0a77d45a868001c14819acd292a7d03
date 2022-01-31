@@ -1,0 +1,14 @@
+package com.AfterTestNG;
+
+import org.junit.Test;
+
+public class Data_Validation {
+	@Test
+	private void validate_Data() {
+		
+		
+	}
+	
+	
+
+}

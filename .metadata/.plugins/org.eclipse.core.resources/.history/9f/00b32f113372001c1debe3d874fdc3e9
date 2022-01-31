@@ -1,0 +1,22 @@
+package com.coding;
+
+import com.control.If;
+
+public class DoubleEqual_dotEuqals {
+	public static void main(String[] args) {
+		String s = "Vikey";
+		String s1 = "Vikey";
+		// reference comparision
+		System.out.println(s == s1);
+		// content comparison
+		System.out.println(s.equals(s1));
+
+	}
+	public DoubleEqual_dotEuqals d;//----null
+	public void doublrEqual() {
+		if (d==null) {
+			d= new DoubleEqual_dotEuqals();
+		}
+	}
+
+}

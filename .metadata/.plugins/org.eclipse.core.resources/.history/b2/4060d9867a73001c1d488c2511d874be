@@ -1,0 +1,22 @@
+package com.interviewPrograms;
+
+public class Child2 extends Parent2{
+	public Child2() {
+		System.out.println("Child constructor");
+	}
+	@Override
+	protected void method1() {
+		System.out.println("child method1");
+	}
+	public static void main(String[] args) {
+		Parent2 p=new Parent2();
+//		p.method1();
+//		
+//		Child2 c=new Child2();
+//		c.method1();
+//		
+//		Parent2 p1=new Child2();
+//		p1.method1();
+	}
+
+}

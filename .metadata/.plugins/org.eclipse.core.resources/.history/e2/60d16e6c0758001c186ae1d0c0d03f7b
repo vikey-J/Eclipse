@@ -1,0 +1,61 @@
+package com.pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class PurchacePage {
+	public WebDriver driver;
+	@FindBy(xpath="//i[@class='icon-plus']")
+	private WebElement click1;
+	
+	@FindBy(xpath="//i[@class='icon-plus']")
+	private WebElement click2;
+	
+	@FindBy(xpath="//i[@class='icon-plus']")
+	private WebElement click3;
+	
+	@FindBy(xpath="//i[@class='icon-plus']")
+	private WebElement click14;
+	
+	@FindBy(xpath="//i[@class='icon-plus']")
+	private WebElement click5;
+	
+	@FindBy(xpath="//i[@class='icon-plus']")
+	private WebElement click6;
+    
+	@FindBy(xpath="(//i[@class='icon-chevron-right right'])[3]")
+	private WebElement checkout2;
+
+	public PurchacePage(WebDriver driver2) {
+    this.driver=driver2;
+    }
+
+	public WebElement getClick1() {
+		return click1;
+	}
+
+	public WebElement getClick2() {
+		return click2;
+	}
+
+	public WebElement getClick3() {
+		return click3;
+	}
+
+	public WebElement getClick14() {
+		return click14;
+	}
+
+	public WebElement getClick5() {
+		return click5;
+	}
+
+	public WebElement getClick6() {
+		return click6;
+	}
+
+	public WebElement getCheckout2() {
+		return checkout2;
+	}
+}

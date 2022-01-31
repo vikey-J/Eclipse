@@ -1,0 +1,16 @@
+package com.testng;
+
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class Demo {
+	@Test
+	@Parameters({"user","pass"})
+	private void data(String user,String pass) {
+		System.out.println("username : "+user);
+		System.out.println("password : "+pass);
+	}
+	
+	
+}

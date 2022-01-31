@@ -1,0 +1,121 @@
+package com.testNG_Runner;
+
+import java.util.concurrent.TimeUnit;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.base_Class.Base_Class;
+import com.manager.POManager;
+
+public class Adactin_Runner extends Base_Class {
+	public static WebDriver driver = getBrowser("chrome");
+	public static POManager pom = new POManager(driver);
+	public static Logger log = Logger.getLogger(Adactin_Runner.class);
+
+@BeforeClass
+public void url_Launch() {
+	implicitWait(10, TimeUnit.SECONDS);
+		url("https://adactinhotelapp.com/");
+		log.info("Url launched");
+}
+@BeforeMethod
+public void login() {
+		// login
+		String username = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 1, 5);
+		sendkeys(pom.getHp().getUsername(), username);
+		String password = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 2, 5);
+		sendkeys(pom.getHp().getPassword(), password);
+		click(pom.getHp().getLogin());
+		implicitWait(20, TimeUnit.SECONDS);
+		log.info("Login successfull");
+}
+@Test
+public void searchHotel() {
+		// Search Hotel
+		implicitWait(30, TimeUnit.SECONDS);
+		String location = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 4, 5);
+		selectByValue(pom.getS().getLocation(), location);
+
+		String hotel = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 5, 5);
+		selectByValue(pom.getS().getHotel(), hotel);
+
+		String roomType = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 6, 5);
+		selectByValue(pom.getS().getRoomtypes(), roomType);
+
+		String noOfRooms = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 7, 5);
+		selectByValue(pom.getS().getRooms(), noOfRooms);
+
+		String cinDate = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 8, 5);
+		sendkeys(pom.getS().getDate1(), cinDate);
+
+		String coutDate = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 9, 5);
+		sendkeys(pom.getS().getDate2(), coutDate);
+
+		String adult = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 10, 5);
+		selectByValue(pom.getS().getAdult(), adult);
+
+		String child = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 11, 5);
+		selectByValue(pom.getS().getChild(), child);
+		click(pom.getS().getSearch());
+		implicitWait(20, TimeUnit.SECONDS);
+		log.info("Hotel serached successfully");
+}
+@Test
+public void selectHotel() {
+		// Select hotel
+		click(pom.getSh().getAgree());
+		click(pom.getSh().getContinue());
+		implicitWait(20, TimeUnit.SECONDS);
+		log.info("Hotel selected successfully");
+}
+@Test
+public void bookHotel() throws Exception {
+		// Book a Hotel
+		String fname = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 15, 5);
+		sendkeys(pom.getBh().getFname(), fname);
+
+		String lname = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 16, 5);
+		sendkeys(pom.getBh().getLname(), lname);
+
+		String address = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 17, 5);
+		sendkeys(pom.getBh().getAdress(), address);
+
+		String creditCardNo = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 18, 5);
+		sendkeys(pom.getBh().getCreditCard(), creditCardNo);
+
+		String cType = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 19, 5);
+		selectByValue(pom.getBh().getCcType(), cType);
+
+		String expMonth = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 20, 5);
+		selectByValue(pom.getBh().getExpMonth(), expMonth);
+
+		String expYear = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 21, 5);
+		selectByValue(pom.getBh().getExpYear(), expYear);
+
+		String ccvNo = ParticularData("C:\\Users\\my pc\\Documents\\TestCase_for_Project2.xlsx", 22, 5);
+		sendkeys(pom.getBh().getCcv(), ccvNo);
+		click(pom.getBh().getBooknow());
+		implicitWait(20, TimeUnit.SECONDS);
+		log.info("Hotel Booked successfully");
+}
+@AfterMethod
+public void logOut() {
+		// Booking Confirmation
+		click(pom.getF().getLogout());
+		log.info("Logout successfully");
+}
+@AfterClass
+public void url_Close() {
+		driver.close();
+		log.info("Browser close successfully");
+}
+
+	}
+

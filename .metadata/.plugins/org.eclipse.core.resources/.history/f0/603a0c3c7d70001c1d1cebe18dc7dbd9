@@ -1,0 +1,18 @@
+  package com.string;
+
+public class Immutable {
+	public static void main(String[] args) {
+		String a="vikey";
+		String b="vikey";
+		int identityHashCode=System.identityHashCode(a);
+		int identityHashCode2 = System.identityHashCode(b);
+		System.out.println("memory of s : "+ identityHashCode);
+		System.out.println("memory of b : "+ identityHashCode2);
+		String concat = a.concat(b);
+		System.out.println("concat string is :"+concat);
+		int identityHashCode3 = System.identityHashCode(concat);
+		System.out.println("concat memory is :"+identityHashCode3);
+	}
+
+}
+ 

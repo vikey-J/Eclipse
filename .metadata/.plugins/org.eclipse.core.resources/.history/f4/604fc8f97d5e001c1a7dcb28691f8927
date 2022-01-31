@@ -1,0 +1,10 @@
+package com.intro;
+
+public class B extends A{
+	public  void player1() {
+          System.out.println("p1 : dhoni");
+	}
+	public void player2() {
+		System.out.println("p2 : vk");
+	}
+}

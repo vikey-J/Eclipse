@@ -1,0 +1,10 @@
+package com.pomanager;
+
+public class DD {
+	public DD() {
+	}
+	public static void main(String[] args) {
+		DD d=new DD();
+	}
+
+}

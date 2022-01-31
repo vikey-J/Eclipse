@@ -1,0 +1,17 @@
+package com.cucumber_Runner;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+
+import com.base_Class.Base_Class;
+import com.pomanager.Page_Object_Manager;
+import com.runner_Class.Test_Runner;
+
+public class Cucumber_Runner extends Base_Class {
+	public static WebDriver driver = getBrowser("chrome");
+	public static Page_Object_Manager pom = new Page_Object_Manager(driver);
+	public static Logger log = Logger.getLogger(Test_Runner.class);
+
+	
+	
+}

@@ -1,0 +1,19 @@
+package com.practice;
+
+public class Apple{
+	public Apple() {
+		System.out.println("Default");
+	}
+	public Apple(String name) {
+		System.out.println(name);
+	}
+	public Apple(int age) {
+		System.out.println(age);
+	}
+	public Apple(char gender) {
+		System.out.println(gender);
+	}
+	public static void main(String[] args) {
+		Apple a=new Apple();
+	}
+}

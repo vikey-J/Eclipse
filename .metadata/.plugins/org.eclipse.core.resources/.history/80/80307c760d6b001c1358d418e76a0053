@@ -1,0 +1,22 @@
+package com.validation;
+
+import org.junit.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class Data_Validation{
+	@Test
+	private void data_Validation() {
+		RestAssured.baseURI="https://reqres.in/";
+		RequestSpecification request = RestAssured.given();
+		Response response = request.get("api/users?page=2");
+		String responseBody = response.asString();
+		System.out.println(responseBody);
+		
+	}
+	
+	
+	
+}

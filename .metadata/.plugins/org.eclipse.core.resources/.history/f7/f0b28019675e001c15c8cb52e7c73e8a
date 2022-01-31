@@ -1,0 +1,26 @@
+package com.convertion;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class L2S {
+	public static <T> Set<T> convertListToSet(List<T> list) {
+		Set<T> s=new HashSet<>();
+		for (T t : list) {
+			s.add(t);
+		}
+		return s;
+	}
+	public static void main(String[] args) {
+		List<String > list=Arrays.asList("vk",
+				                          "Vikey",
+				                          "Kumar",
+				                           "J");
+		System.out.println("list"+list);
+		Set<String> s=convertListToSet(list);
+		System.out.println("set : "+s);
+	}
+
+}

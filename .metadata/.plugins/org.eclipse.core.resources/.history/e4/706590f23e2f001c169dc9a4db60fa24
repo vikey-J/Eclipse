@@ -1,0 +1,31 @@
+package com.javaclass;
+
+public class Interface2 implements AbstractionType2,Interface1{
+
+	@Override
+	public void person3() {
+System.out.println("Dengu");		
+	}
+
+	@Override
+	public void person4() {
+System.out.println("MaleriA");		
+	}
+
+	@Override
+	public void person1() {
+System.out.println("HIV");		
+	}
+
+	@Override
+	public void person2() {
+System.out.println("PB");
+	}
+public static void main(String[] args) {
+	Interface2 a=new Interface2();
+	a.person1();
+	a.person2();
+	a.person3();
+	a.person4();
+}
+}

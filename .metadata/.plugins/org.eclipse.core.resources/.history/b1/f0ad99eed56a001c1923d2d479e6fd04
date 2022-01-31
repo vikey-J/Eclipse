@@ -1,0 +1,15 @@
+package com.practice;
+
+public class C extends B{
+	private void future() {
+System.out.println("Future");
+	}
+	public static void main(String[] args) {
+		C c=new C();
+		c.parent();
+		c.child();
+		c.future();
+		
+	}
+
+}

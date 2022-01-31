@@ -1,0 +1,17 @@
+package com.testng;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class Assert_Concept {
+	@Test
+	private void username() {
+		String expected = "Andrew";
+		String actual="andrew";
+		Assert.assertEquals(actual, expected);
+		System.out.println("failed");
+//		System.out.println("Assert Executed Successful");
+		
+	}
+
+}

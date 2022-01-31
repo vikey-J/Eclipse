@@ -1,0 +1,14 @@
+package com.interviewPrograms;
+
+import java.util.Scanner;
+
+public class ReverseString_Polindrome {
+	public static void main(String args[]) {
+		String s,rs="";
+		char ch;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter a String : ");
+		s=sc.nextInt();
+
+	}
+}

@@ -1,0 +1,46 @@
+package com.alert;
+
+import java.io.IOException;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class A {
+	public static void main(String[] args) throws InterruptedException, IOException {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\my pc\\eclipse-workspace\\Selenium\\ChromeDriver_win32\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("http://demo.automationtesting.in/Alerts.html");
+		driver.manage().window().maximize();
+		//simple alert
+		WebElement sa = driver.findElement(By.xpath("//button[@class='btn btn-danger']"));
+		sa.click();
+		Thread.sleep(2000);
+		driver.switchTo().alert().accept();
+		System.out.println("simple alert process completed");
+		//confirm alert
+		
+		WebElement ca = driver.findElement(By.xpath("(//a[@class='analystic'])[2]"));
+		ca.click();
+		WebElement ca2 = driver.findElement(By.xpath("(//button[@class='btn btn-primary'])"));
+		ca.click();
+		driver.switchTo().alert().accept();
+		Thread.sleep(2000);
+		System.out.println("confirm alert process completed");
+		
+		//prompt alert
+		WebElement pa = driver.findElement(By.xpath("(//a[@class='analystic'])[3]"));
+		pa.click();
+		WebElement pa2 = driver.findElement(By.xpath("//button[@class='btn btn-info']"));
+		pa.click();
+		Thread.sleep(2000);
+		driver.switchTo().alert().sendKeys("VIKNESHKUMAR");
+		driver.switchTo().alert().accept();
+		driver.close();
+		
+		
+
+	}
+}

@@ -1,0 +1,16 @@
+package com.pom;
+
+public class Snippet {
+	public static void main(String[] args) {
+		/Maven_Project/src/main/java/com/base_Class/Adress_Page.java
+		/Maven_Project/src/main/java/com/base_Class/Cart_page.java
+		/Maven_Project/src/main/java/com/base_Class/HomePage.java
+		/Maven_Project/src/main/java/com/base_Class/New_Acc.java
+		/Maven_Project/src/main/java/com/base_Class/Payment_Page.java
+		/Maven_Project/src/main/java/com/base_Class/Shiping_Page.java
+		/Maven_Project/src/main/java/com/base_Class/Singin_Page.java
+		/Maven_Project/src/main/java/com/base_Class/Summary.java
+		/Maven_Project/src/main/java/com/pom/
+	}
+}
+

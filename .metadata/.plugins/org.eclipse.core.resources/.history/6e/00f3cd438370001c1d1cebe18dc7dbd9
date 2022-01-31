@@ -1,0 +1,11 @@
+package com.string;
+
+public class String_Function {
+	public static void main(String[] args) {
+		String s="VIKNESH KUMAR";
+		String[] split = s.split(" ");
+		System.out.println(split);
+		
+	}
+
+}

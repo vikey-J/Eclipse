@@ -1,0 +1,43 @@
+Feature: Purchasing Dresses On Automation Practice Application
+Scenario: Click Signin For TShirt 
+Given user Launch The Application
+Then user Click On Signin Button And It Navigate To My Store Page1
+Scenario: Signin for Tshirt 
+When user Enter The Email Adress In  Email Address Field1
+And user Enter The Password In Password Field1
+Then user Click On Signin Button And It Navigate To My Account Page1 
+Scenario: User Purchase The T-Shirt  
+When user Click on Women Button1 
+And user Click On Tops Button1
+And user Click On TShirt Button
+And user Move To Cursor On Instock Button And Click AddToCart Button1
+And user Click On ProceedToCheckOut Button1
+And user Enter Or Increse Quality In TextBox1 
+And user Click On ProceedtoCheckOut Button1
+And user Click On ProceedtoCheckout Button1
+And user Select The CheckBox On Terms Of Service1 
+And user Click On ProceedToCheckout Button1
+And user Click On Pay By Bank Wire Button1
+And user Click On I Confirm My Order Button1 
+Then user Click On Sign Out Button It Navigate To HomePage1
+
+Scenario: Click Signin For Blouses 
+Then user Click On Signin Button And It Navigate To My Store Page1
+Scenario: Signin for Tshirt 
+When user Enter The Email Adress In  Email Address Field1
+And user Enter The Password In Password Field1
+Then user Click On Signin Button And It Navigate To My Account Page1 
+Scenario: User Purchase The T-Shirt  
+When user Click on Women Button1 
+And user Click On Tops Button1
+And user Click On TShirt Button
+And user Move To Cursor On Instock Button And Click AddToCart Button1
+And user Click On ProceedToCheckOut Button1
+And user Enter Or Increse Quality In TextBox1 
+And user Click On ProceedtoCheckOut Button1
+And user Click On ProceedtoCheckout Button1
+And user Select The CheckBox On Terms Of Service1 
+And user Click On ProceedToCheckout Button1
+And user Click On Pay By Bank Wire Button1
+And user Click On I Confirm My Order Button1 
+Then user Click On Sign Out Button It Navigate To HomePage1

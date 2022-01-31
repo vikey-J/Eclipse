@@ -1,0 +1,18 @@
+package com.pommanager;
+
+import java.io.IOException;
+
+public class FileReadManager {
+	private FileReadManager() {
+		
+	}
+	public static FileReadManager getFRM(){
+		FileReadManager frm=new FileReadManager();
+		return frm;
+	}
+	public ConfiguratorReader getCR() throws IOException {
+		ConfiguratorReader cr=new ConfiguratorReader();
+		return cr;
+	}
+
+}

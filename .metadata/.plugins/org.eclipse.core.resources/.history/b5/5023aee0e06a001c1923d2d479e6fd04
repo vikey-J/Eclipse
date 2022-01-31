@@ -1,0 +1,13 @@
+package com.practice;
+
+public abstract class A {
+	public void username() {
+		System.out.println("Vikey");
+	}
+	public void email() {
+		System.out.println("vikey@gmail.com");
+	}
+	public void password() {
+		
+	}
+}

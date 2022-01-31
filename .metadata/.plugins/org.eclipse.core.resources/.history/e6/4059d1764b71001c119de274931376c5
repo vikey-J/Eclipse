@@ -1,0 +1,27 @@
+package com.javascriptexecutor;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class A {
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\my pc\\eclipse-workspace\\Selenium\\ChromeDriver_win32\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.instagram.com");
+		driver.manage().window().maximize();
+		Thread.sleep(2000);
+		JavascriptExecutor js =(JavascriptExecutor)driver;
+		WebElement username = driver.findElement(By.name("username"));
+		js.executeScript("arguments[0].value='Thenral96'",username);
+		WebElement password = driver.findElement(By.name("password"));
+		js.executeScript("arguments[0].value='vikey2000j'", password);
+		
+		WebElement login = driver.findElement(By.xpath("//div[text()='Log In']"));
+		js.executeScript("arguments[0].click();", login);
+           	
+
+}
+}

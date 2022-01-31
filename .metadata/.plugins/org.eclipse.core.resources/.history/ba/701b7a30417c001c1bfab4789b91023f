@@ -1,0 +1,23 @@
+package com.interviewPrograms;
+
+import java.util.Scanner;
+
+public class Polindrome {
+	public static void main(String[] args) {
+		String os,rs="";
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a String or Number :");
+		os=sc.nextLine();
+		int l = os.length();
+		for(int i=l-1;i>=0;i--)
+			rs=rs+os.charAt(i);
+	    if(os.equals(rs))
+	    	System.out.println("It is a polindrom");
+	    else
+	    	System.out.println("It is not a polindrome ");
+		
+		
+	
+	}
+
+}

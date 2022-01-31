@@ -1,0 +1,79 @@
+package com.runner;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.base_Class.Base_Class;
+
+import pom2.BookHotel;
+import pom2.Final;
+import pom2.HomePage;
+import pom2.SearchHotel;
+import pom2.SelectHotel;
+
+
+public class Runner extends Base_Class{
+	public static WebDriver  driver = getBrowser("chrome");
+	public static  HomePage hp=new HomePage(driver);
+	public static SearchHotel s=new SearchHotel(driver);
+	public static SelectHotel sh=new SelectHotel(driver);
+	public static BookHotel bh=new BookHotel(driver);
+	public static Final f=new Final(driver);
+	public static void main(String[] args)  {
+		
+		url("https://adactinhotelapp.com/");
+		//login
+		sendkeys(hp.getUsername(), "vikneshkumar");
+		sendkeys(hp.getPassword(), "VCVM24");
+		click(hp.getLogin());
+		implicitWait(20, TimeUnit.SECONDS);
+		// Search Hotel
+		implicitWait(30, TimeUnit.SECONDS);
+		dropdownSelectByValue(s.getLocation(), "New York");
+		dropdownSelectByValue(s.getHotel(), "Hotel Sunshine");
+        dropdownSelectByValue(s.getRoomtypes(), "Double");
+		dropdownSelectByValue(s.getRooms(), "2");
+		sendkeys(s.getDate1(), "22/11/2021");
+		sendkeys(s.getDate2(), "24/11/2021");
+		dropdownSelectByValue(s.getAdult(),"3");
+		dropdownSelectByValue(s.getChild(), "2");
+		click(s.getSearch());
+		implicitWait(20,TimeUnit.SECONDS);
+		// Select hotel
+		click(sh.getAgree());
+		click(sh.getContinuee());
+		implicitWait(20,TimeUnit.SECONDS);
+		// Book a Hotel
+		sendkeys(bh.getFname(), "VIKNESH");
+		sendkeys(bh.getLname(),"KUMAR");
+		sendkeys(bh.getAdress(),"no.17a,Avengers Tour,New York");
+		sendkeys(bh.getCreditCard(),"9876123405467744");
+		dropdownSelectByValue(bh.getCcType(), "MAST");
+		dropdownSelectByValue(bh.getExpMonth(), "10");
+		dropdownSelectByValue(bh.getExpYear(), "2022");
+		sendkeys(bh.getCcv(),"9876");
+		click(bh.getBooknow());
+		implicitWait(20, TimeUnit.SECONDS);
+		// Booking Confirmation
+		click(f.getLogout());
+		// Take Screenshot output
+		
+//		TakesScreenshot ts=(TakesScreenshot)driver;
+//		File source=ts.getScreenshotAs(OutputType.FILE);
+//		File destination=new File("C:\\Users\\my pc\\eclipse-workspace\\Selenium_Project\\Screenshot.miniproject2.png");
+//		FileUtils.copyFile(source, destination);
+//				
+		
+		
+	}
+}

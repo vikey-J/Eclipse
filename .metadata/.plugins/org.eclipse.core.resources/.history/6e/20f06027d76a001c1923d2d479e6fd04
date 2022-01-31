@@ -1,0 +1,9 @@
+package com.practice;
+
+public class B extends A {
+	public static void player1() {
+		System.out.println("player1 : MSD");
+	}
+
+
+}

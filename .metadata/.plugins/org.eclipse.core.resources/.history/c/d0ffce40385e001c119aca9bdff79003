@@ -1,0 +1,24 @@
+package com.convertion;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class VKJ {
+	public static <T> List<T> convertArrayToList(T array[])
+	{
+		List<T> list=new ArrayList<>();
+		for (T t : array) {
+			list.add(t);
+		}
+           return list;		
+	}
+	public static void main(String[] args) {
+		String array[]= {"viknesh","Kumar","J"};
+		System.out.println(Arrays.toString(array));
+		List<String> list=convertArrayToList(array);
+		System.out.println(list);
+	}
+	
+
+}

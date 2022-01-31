@@ -1,0 +1,21 @@
+package com.demo;
+
+import java.io.IOException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import com.base.Base;
+
+public class Ts extends Base {
+	public static void main(String[] args) throws IOException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\my pc\\eclipse-workspace\\Selenium\\chromedriver_win32\\chromedriver_win32\\chromedriver.exe");
+	    WebDriver driver=new ChromeDriver();
+	    driver.get("https://www.facebook.com");
+	    driver.manage().window().maximize();
+	    takesScreenshot(driver);
+	    
+	
+	}
+
+}

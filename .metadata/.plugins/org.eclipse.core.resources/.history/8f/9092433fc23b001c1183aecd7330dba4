@@ -1,0 +1,28 @@
+package com.dropdown;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Multi_Drop_Down {
+	public static void main(String args[]) {
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\my pc\\eclipse-workspace\\Java_Project\\ChromeDriver_win32\\chromedriver_win32\\chromedriver.exe");
+     
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://www.leafground.com/pages/Dropdown.html");
+		driver.manage().window().maximize();
+		WebElement drop = driver.findElement(By.xpath("(//select)[6]"));
+		Select s=new Select(drop);
+		System.out.println("-------------------------------------");
+		s.selectByValue("1");
+		s.selectByIndex(3);
+		s.selectByVisibleText("Loadrunner");
+		
+		boolean multiple = s.isMultiple();
+		System.out.println(multiple);
+	}
+
+}

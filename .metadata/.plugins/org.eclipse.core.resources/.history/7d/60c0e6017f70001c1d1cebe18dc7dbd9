@@ -1,0 +1,14 @@
+package com.string;
+
+public class String_Function {
+	public static void main(String[] args) {
+		String s="VIKNESHKUMAR";
+		int i = s.length();
+		System.out.println("length :"+i);
+		boolean b = s.equals("vikneshkumar");
+		System.out.println("given value is equal ? :"+b);
+		boolean case1 = s.equalsIgnoreCase("vikneShKUMar");
+		System.out.println("this is equal : "+case1);
+	}
+
+}

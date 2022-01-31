@@ -1,0 +1,15 @@
+package com.intro;
+
+public  class B extends A{
+	@Override
+	public void pass() {
+		System.out.println("pass");
+	}
+	public static void main(String[] args) {
+		B a=new B();
+		a.username();
+		a.email();a.pass();
+		
+		
+}
+}

@@ -1,0 +1,21 @@
+package com.convertion;
+
+public class Convertion {
+	public static void main(String[] args) {
+		//int----->String
+		int a=1;
+		String str = Integer.toString(a);
+		System.out.println("string :"+str);
+		
+		//int ---->Double
+		int b=20;
+		double c=b;    //widening
+		
+		//String---->Int
+		String d="vikey";
+		int int1 = Integer.parseInt(d);
+		System.out.println(int1);
+		
+	}
+	
+}

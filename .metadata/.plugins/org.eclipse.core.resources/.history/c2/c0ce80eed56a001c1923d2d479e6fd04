@@ -1,0 +1,8 @@
+package com.practice;
+
+public class A {
+	public  void parent() {
+		System.out.println("JS");
+	}
+
+}

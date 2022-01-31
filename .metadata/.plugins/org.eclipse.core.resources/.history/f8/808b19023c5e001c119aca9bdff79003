@@ -1,0 +1,25 @@
+package com.convertion;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Li2Ar {
+	public static void main(String[] args) {
+		List<String> l=new LinkedList<String>();
+		l.add("viknesh");
+		l.add("kumar");
+		l.add("J");
+		String[] arr=new String[l.size()];
+//		for (int i = 0; i < l.size(); i++) {
+//			arr[i] =l.get(i);
+//			for (String string : arr) {
+//				System.out.println(string+" ");
+//				
+//				
+//			}
+//			
+//		}
+//		
+	}
+
+}

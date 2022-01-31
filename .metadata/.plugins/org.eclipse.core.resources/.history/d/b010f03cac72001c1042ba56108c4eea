@@ -1,0 +1,9 @@
+package com.array;
+
+public class A {
+	private void parent() {
+
+		System.out.println("parent calss");
+	}
+
+}

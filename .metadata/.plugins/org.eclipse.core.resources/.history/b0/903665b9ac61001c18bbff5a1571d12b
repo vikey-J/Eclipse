@@ -1,0 +1,54 @@
+package com.pommanager;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import com.base.HomePage;
+import com.base.PaymentPage;
+import com.base.PurchasePage;
+import com.base.ShippingPage;
+import com.base.SigninPage;
+
+public class PageObjectManager{
+	public static WebDriver driver;
+	public static HomePage hp;
+	public static PurchasePage pp;
+	public static SigninPage sp;
+	public static ShippingPage sh;
+	public static PaymentPage pay;
+	public PageObjectManager (WebDriver driver2) {
+		this.driver=driver2;
+		PageFactory.initElements(driver2, this);
+	}
+	public HomePage getInstanceHP() {
+		if(hp==null) {
+			hp=new HomePage(driver);
+		}
+		return hp;
+	}
+	public PurchasePage getInstancePP() {
+		if(pp==null) {
+			pp=new PurchasePage(driver);
+		}
+		return pp;
+	}
+	public SigninPage getInstanceSP() {
+		if(sp==null) {
+			sp=new SigninPage(driver);
+		}
+		return sp;
+	}
+	public ShippingPage getInstanceSH() {
+		if(sh==null) {
+			sh=new ShippingPage(driver);
+		}
+		return sh;
+	}
+	public PaymentPage getInstancePAY() {
+		if(pay==null) {
+			pay=new PaymentPage(driver);
+		}return pay;
+	}
+	
+	
+}

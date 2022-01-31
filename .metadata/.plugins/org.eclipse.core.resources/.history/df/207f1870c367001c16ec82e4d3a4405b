@@ -1,0 +1,52 @@
+package com.testng;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class SimpleAnnotation {
+
+	@BeforeClass
+	private void urlLaunched() {
+		System.out.println("Url Launched");
+	}
+	@BeforeMethod
+	private void signIn() {
+		System.out.println("SignIn sucessful");
+	}
+	@Test
+	private void purchse_Tshirt() {
+		System.out.println("T-Shirt Purchased");
+	}
+	@Test
+	private void purchase_Blouse() {
+		System.out.println("Blouses Purchased");
+	}
+	@Test
+	private void purchase_CasualDress() {
+		System.out.println("Casual Dress Purchased");
+	}
+	@Test
+	private void purchase_EveningDress() {
+		System.out.println("Evening Dress Purchased");
+	}
+	@Test
+	private void purchase_SummerDress() {
+		System.out.println("Summer Dress Purchased");
+	}
+	
+	@AfterMethod
+	private void sgnOut() {
+		System.out.println("SignOut Successful");
+	}
+	@AfterClass
+	private void url_Closed() {
+		System.out.println("url closed");
+	}
+}

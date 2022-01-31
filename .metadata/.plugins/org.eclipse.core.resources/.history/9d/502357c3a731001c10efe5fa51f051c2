@@ -1,0 +1,60 @@
+package com.collection;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Set1 {
+	public static void main(String[] args) {
+		Set<Object> s=new HashSet<Object>();
+		//add
+		
+		s.add("vikey");
+		s.add(46);
+		s.add(46.76);
+		s.add('s');
+		System.out.println(s);
+		
+		//size
+		
+		int size = s.size();
+		System.out.println(size);
+		
+		//get
+	//	Class<? extends Set> class1 = s.getClass();
+		
+		//set
+		
+		//s.set(0,"vikey");
+		
+		//remove
+		
+	//	s.remove(2);
+	//	System.out.println(s);
+		
+		//indexOf
+	  //   s.indexOf();
+		
+		//contains
+		boolean contains = s.contains('s');
+		System.out.println(contains);
+		
+		//clear
+		s.clear();
+		System.out.println(s);
+		
+		//addAll
+		Set<Object> s1=new HashSet<Object>();
+		s1.add("viki");
+		s1.add(464);
+		s1.add(4655.76);
+		s1.add('8');
+		
+		s.addAll(s1);
+		System.out.println(s);
+		
+		
+		
+		
+	}
+
+}

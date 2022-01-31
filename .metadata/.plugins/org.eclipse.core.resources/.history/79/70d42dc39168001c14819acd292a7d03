@@ -1,0 +1,22 @@
+package com.testNG_Runner;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+import com.base_Class.Base_Class;
+import com.helper.File_Reder_Manager;
+import com.women_POManager.PageObjectManager;
+
+public class TestNG_Runner extends Base_Class{
+	public static WebDriver driver=getBrowser("chrome");
+	public static PageObjectManager pom=new PageObjectManager(driver);
+	public static Logger log=Logger.getLogger(TestNG_Runner.class);
+//	@BeforeClass
+	@Test
+	public void url_Launch() throws Throwable {
+		String url = File_Reder_Manager.getInstanceFRM().getInstanceCR().getUrl();
+		url(url);
+	}
+}

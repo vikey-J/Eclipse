@@ -1,0 +1,8 @@
+package com.intro;
+
+public class A {
+	public void name1() {
+		System.out.println("Vk");
+	}
+
+}

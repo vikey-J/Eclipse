@@ -1,0 +1,96 @@
+package com.testNG;
+
+import java.util.concurrent.TimeUnit;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import com.base_Class.Base_Class;
+import com.blousesPOM.PageObjectManager_B;
+import com.dressCasualDress.PageObjectManagerCasualDress;
+import com.helper.File_Reder_Manager;
+
+public class Dress_CasualDress extends Base_Class {
+	public static WebDriver driver=getBrowser("chrome");
+	public static PageObjectManagerCasualDress pom = new PageObjectManagerCasualDress(driver);
+	public static Logger log=Logger.getLogger(Dress_CasualDress.class);
+	@Test(priority = -2)
+	public void openBrowser() throws Throwable {
+		implicitWait(10, TimeUnit.SECONDS);
+		String url = File_Reder_Manager.getInstanceFRM().getInstanceCR().getUrl();
+		url(url);
+		log.info("Url Launched");
+		
+	}
+	@Test(priority = -1)
+	public void homePage() {
+		implicitWait(10, TimeUnit.SECONDS);
+		click(pom.getInstanceHP().getWomen());
+		implicitWait(10, TimeUnit.SECONDS);
+		click(pom.getInstanceHP().getDress());
+		implicitWait(10, TimeUnit.SECONDS);
+		click(pom.getInstanceHP().getCasualDress());
+		implicitWait(10, TimeUnit.SECONDS);
+		log.info("Home Page process success");
+	}
+	@Test(priority = 0)
+	public void addToCart() {
+		explicitWait(10, pom.getInstanceATC().getInstock());
+		moveToElement(driver, pom.getInstanceATC().getInstock());
+		explicitWait(10, pom.getInstanceATC().getAddtocart());
+		click(pom.getInstanceATC().getAddtocart());
+		explicitWait(10, pom.getInstanceATC().getCheckout1());
+		click(pom.getInstanceATC().getCheckout1());
+	}
+	@Test(priority = 1)
+	public void PurchasePage() {
+		implicitWait(10, TimeUnit.SECONDS);
+		clear(pom.getInstancePP().getTextbox());
+		sendkeys(pom.getInstancePP().getNofproduct(), "4");
+		click(pom.getInstancePP().getCheckout2());
+	}
+	@Test(priority = 2)
+	public void SigninPage() {
+		implicitWait(30, TimeUnit.SECONDS);
+		sendkeys(pom.getInstanceSP().getEmail(), "vikey46@gmail.com");
+		sendkeys(pom.getInstanceSP().getPassword(), "vikey@123");
+		click(pom.getInstanceSP().getSignin());
+	}
+	@Test(priority = 3)
+	public void InfoCheck() {
+		implicitWait(30, TimeUnit.SECONDS);
+		click(pom.getInstanceIC().getCheckout3());
+	}
+	@Test(priority = 4)
+	public void checkingPurchaseInfo() {
+		implicitWait(30, TimeUnit.SECONDS);
+		click(pom.getInstanceCPI().getAgree());
+		click(pom.getInstanceCPI().getCheckout4());
+	}
+	@Test(priority = 5)
+	public void bankPayment() {
+		implicitWait(30, TimeUnit.SECONDS);
+		click(pom.getInstanceBP().getBank());
+	}
+	@Test(priority = 6)
+	public void fialPage() {
+		implicitWait(30, TimeUnit.SECONDS);
+		click(pom.getInstanceFP().getConfirm());
+		javaScriptExecutor();
+	}
+	@Test
+	public void closeBrowser() {
+		close();
+	}
+	
+	
+
+		
+
+}
+

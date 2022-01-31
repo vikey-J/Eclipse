@@ -1,0 +1,15 @@
+package com.convertion;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class L {
+	public static void main(String[] args) {
+		
+		List<Object> l=new ArrayList<Object>();
+		l.add("vikey");
+		l.add(7);
+		System.out.println(l);
+	}
+
+}

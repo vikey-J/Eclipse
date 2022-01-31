@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="27849" started-at="2022-01-03T13:33:18 IST" finished-at="2022-01-03T13:33:45 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="27849" started-at="2022-01-03T13:33:18 IST" finished-at="2022-01-03T13:33:45 IST">
+      <class name="com.testNG_Runner.Adactin_Runner">
+        <test-method status="PASS" signature="url_Launch()[pri:-5, instance:com.testNG_Runner.Adactin_Runner@34f6515b]" name="url_Launch" duration-ms="11466" started-at="2022-01-03T13:33:18 IST" finished-at="2022-01-03T13:33:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- url_Launch -->
+        <test-method status="PASS" signature="login()[pri:-2, instance:com.testNG_Runner.Adactin_Runner@34f6515b]" name="login" duration-ms="1923" started-at="2022-01-03T13:33:29 IST" finished-at="2022-01-03T13:33:31 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="searchHotel()[pri:0, instance:com.testNG_Runner.Adactin_Runner@34f6515b]" name="searchHotel" duration-ms="2966" started-at="2022-01-03T13:33:31 IST" finished-at="2022-01-03T13:33:34 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotel -->
+        <test-method status="PASS" signature="selectHotel()[pri:1, instance:com.testNG_Runner.Adactin_Runner@34f6515b]" name="selectHotel" duration-ms="1124" started-at="2022-01-03T13:33:34 IST" finished-at="2022-01-03T13:33:35 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectHotel -->
+        <test-method status="PASS" signature="bookHotel()[pri:2, instance:com.testNG_Runner.Adactin_Runner@34f6515b]" name="bookHotel" duration-ms="1873" started-at="2022-01-03T13:33:35 IST" finished-at="2022-01-03T13:33:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- bookHotel -->
+        <test-method status="PASS" signature="logOut()[pri:3, instance:com.testNG_Runner.Adactin_Runner@34f6515b]" name="logOut" duration-ms="6013" started-at="2022-01-03T13:33:37 IST" finished-at="2022-01-03T13:33:43 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOut -->
+        <test-method status="PASS" signature="url_Close()[pri:5, instance:com.testNG_Runner.Adactin_Runner@34f6515b]" name="url_Close" duration-ms="2263" started-at="2022-01-03T13:33:43 IST" finished-at="2022-01-03T13:33:45 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- url_Close -->
+      </class> <!-- com.testNG_Runner.Adactin_Runner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

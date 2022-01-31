@@ -1,0 +1,32 @@
+package com.convertion;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class L {
+	public static void main(String[] args) {
+		
+		List<Object> l=new LinkedList<Object>();
+		l.add("vikey");
+		l.add(7);
+		l.add(null);
+		System.out.println(l);
+		
+		 int size = l.size();
+		 System.out.println(size);
+		 
+		 Object object = l.get(1);
+		 System.out.println(object);
+		 
+		 l.set(0,"VK");
+		 System.out.println(l);
+		 
+		 l.remove(null);
+		 System.out.println(l);
+		 
+		 int i = l.indexOf("VK");
+		 System.out.println(i);
+	}
+
+}

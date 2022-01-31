@@ -1,0 +1,8 @@
+package com.intro;
+
+public class B{
+	public  void name() {
+          System.out.println("name1");
+	}
+
+}

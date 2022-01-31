@@ -1,0 +1,21 @@
+package com.testng;
+
+import org.testng.annotations.Test;
+
+public class InnovacationCount {
+	@Test
+	private void openChrome() {
+		System.out.println("Chrome open");
+	}
+
+	@Test
+	private void url() {
+		System.out.println("URL entered");
+	}
+
+	@Test
+	private void refresh() {
+		System.out.println("Refresh");
+	}
+
+}

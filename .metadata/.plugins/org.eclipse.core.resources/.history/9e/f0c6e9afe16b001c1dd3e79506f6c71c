@@ -1,0 +1,14 @@
+package com.step_Definition;
+
+import org.openqa.selenium.WebDriver;
+
+import com.base_Class.Base_Class;
+import com.manager.POManager;
+import com.runner.Test_Runner;
+
+public class Step_Def extends Base_Class{
+//	public static WebDriver deiver = Test_Runner.driver;
+//	public static POManager pom = new POManager(deiver);
+	
+	
+}

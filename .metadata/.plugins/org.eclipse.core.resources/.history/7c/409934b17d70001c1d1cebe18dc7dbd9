@@ -1,0 +1,14 @@
+package com.string;
+
+public class Mutable {
+public static void main(String[] args) {
+	StringBuilder sb= new StringBuilder("selenium");
+	StringBuffer sb1=new StringBuffer("selenium");
+	System.out.println("memory sb :"+System.identityHashCode(sb));
+	System.out.println("memory sb1 :"+System.identityHashCode(sb1));
+	StringBuilder append = sb.append(sb1);
+    System.out.println("append is :"+append);
+    System.out.println("Append memory :"+System.identityHashCode(append));
+ 
+}
+}

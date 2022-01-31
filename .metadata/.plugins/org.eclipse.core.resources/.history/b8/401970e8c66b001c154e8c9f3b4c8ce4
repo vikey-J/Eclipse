@@ -1,0 +1,16 @@
+Feature: Hotel Bokking In Adactin Application
+Scenario: Login
+Given user Launch The Application
+When user Enter The Username In Username Field
+And user Enter The Password In Password Field
+Then user Cllick On Login Button And It Navigate To Search Hotel Page
+Scenario: Search Hotel
+When user Select The Location 
+And user Select The Hotel
+And user Select The Room Type
+And user Select The  Number Of Rooms
+And user Enter The Check In Date
+And user Enter The Check Out Date
+And user Select Adults Per Room
+And user Select The Childrens Per Room
+Then user Click To Search Button And It Navigate To Select Hotel Page 

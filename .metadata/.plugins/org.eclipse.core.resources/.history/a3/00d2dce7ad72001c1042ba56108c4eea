@@ -1,0 +1,10 @@
+package com.interviewPrograms;
+
+public class Snippet {
+	
+		System.out.println("child");
+	}
+	
+	public static void main
+}
+

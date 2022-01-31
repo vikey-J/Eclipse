@@ -1,0 +1,10 @@
+package com.variables;
+
+public class A {
+	static int a=10;
+	String b="h";
+	private void m() {
+		int i=11;
+	}
+
+}

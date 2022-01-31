@@ -1,0 +1,15 @@
+package com.convertion;
+
+import java.awt.List;
+import java.util.Arrays;
+
+public class Array_List {
+	public static void main(String[] args) {
+		String array[]= {"viknesh","kumar","j"};
+		System.out.println(Arrays.toString(array));
+		 List<String> list=ArrayToListConvertion(array);
+		 System.out.println(list);
+	}
+	
+
+}

@@ -1,0 +1,14 @@
+package com.intro;
+
+public class B extends A{
+	public  void name() {
+          System.out.println("name1");
+	}
+	public static void main(String[] args) {
+		B b=new B();
+		b.name();
+		b.name1();
+		
+	}
+
+}

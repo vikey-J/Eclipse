@@ -1,0 +1,27 @@
+package org.collection;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class List1 {
+	public static void main(String[] args) {
+		List<Object> l=new LinkedList<>();
+		//1.add
+		l.add("vikey");
+		l.add(46);
+		l.add(75.99);
+		l.add('v');
+		System.out.println(l);
+		//2.size
+		int size = l.size();
+		System.out.println(size);
+		//3.get
+		Object object = l.get(2);
+		System.out.println(object);
+		//4.set
+		Object set = l.set(0, "vikey");
+		System.out.println(set);
+		
+	}
+
+}
